@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RestController
 class HelloController {
 
     @GetMapping("/")
-    fun get(): String {
-        return "Hello Kotlin!"
+    fun get(): Hello {
+        return Hello(1)
     }
+}
+
+data class Hello(val id: Long) {
+    val name = "Kaleb"
 }
